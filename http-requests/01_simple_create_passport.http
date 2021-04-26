@@ -1,0 +1,12 @@
+POST http://localhost:8000/api/documents
+Content-Type: application/json
+
+{
+  "payload": {
+    "firstName": "Ivan",
+    "lastName": "Ivanov",
+    "citizenship": "Russia",
+    "series": "XC",
+    "number": "123456"
+  }
+}

@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace App\Entity;
 
 use ApiPlatform\Core\Annotation\ApiResource;
+use App\DocumentType\Passport;
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\ORM\Mapping\Entity;
 
@@ -21,10 +22,10 @@ final class Document
     private int $id;
 
     /**
-     * @var object
+     * @var Passport
      * @ORM\Column(type="json_document", options={"jsonb": true})
      */
-    private $payload;
+    private object $payload;
 
     public function __construct(object $payload)
     {
