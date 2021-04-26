@@ -1,0 +1,10 @@
+version: "3.8"
+
+services:
+  database:
+    image: postgres:13-alpine
+    environment:
+      POSTGRES_DB: docs
+      POSTGRES_USER: docs
+      POSTGRES_PASSWORD: docs
+    ports: [5432]
