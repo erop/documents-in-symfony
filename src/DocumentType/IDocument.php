@@ -13,5 +13,7 @@ use Symfony\Component\Serializer\Annotation\DiscriminatorMap;
  */
 interface IDocument
 {
+    public function getDiscriminator(): string;
 
+    public function getName(): string;
 }
