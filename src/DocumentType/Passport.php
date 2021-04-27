@@ -32,7 +32,7 @@ final class Passport implements IDocument
      */
     public string $number;
 
-    public function getDiscriminator(): string
+    public function getType(): string
     {
         return 'passport';
     }

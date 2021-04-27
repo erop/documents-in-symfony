@@ -34,7 +34,7 @@ final class DocumentSchemaService
                 $fieldDefs[$property->getName()] = $annotation;
             }
             $docDefs['name'] = $documentType->getName();
-            $docDefs['discriminator'] = $documentType->getDiscriminator();
+            $docDefs['type'] = $documentType->getType();
             $docDefs['fields'] = $fieldDefs;
             $result[] = $docDefs;
         }

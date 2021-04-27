@@ -27,7 +27,7 @@ final class DrivingLicense implements IDocument
      */
     public array $categories;
 
-    public function getDiscriminator(): string
+    public function getType(): string
     {
         return 'driving_license';
     }
