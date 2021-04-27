@@ -23,7 +23,7 @@ final class DrivingLicense implements IDocument
     public string $birthPlace;
 
     /**
-     * @DocumentField(label="Categories", htmlInputType="select", values={"A", "B", "C", "D", "E"})
+     * @DocumentField(label="Categories", htmlInputType="select", values={"A", "B", "C", "D", "E"}, multiple=true)
      */
     public array $categories;
 
