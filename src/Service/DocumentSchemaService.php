@@ -18,28 +18,25 @@ final class DocumentSchemaService
 
     public function __invoke(): array
     {
-        $result = [];
+        $schemas = [];
         /** @var IDocument $documentType */
         foreach ($this->documentTypes as $documentType) {
-            $docDefs = [];
-            $fieldDefs = [];
+            $schema = [];
+            $fields = [];
             $reader = new AnnotationReader();
-            $class = new \ReflectionClass($documentType);
-            $properties = $class->getProperties();
-            foreach ($properties as $property) {
+            foreach ((new \ReflectionClass($documentType))->getProperties() as $property) {
                 $annotation = $reader->getPropertyAnnotation(
                     $property,
                     DocumentField::class
                 );
-                $fieldDefs[$property->getName()] = $annotation;
+                $fields[$property->getName()] = $annotation;
             }
-            $docDefs['name'] = $documentType->getName();
-            $docDefs['type'] = $documentType->getType();
-            $docDefs['fields'] = $fieldDefs;
-            $result[] = $docDefs;
+            $schema['name'] = $documentType->getName();
+            $schema['type'] = $documentType->getType();
+            $schema['fields'] = $fields;
+            $schemas[] = $schema;
         }
 
-        return $result;
+        return $schemas;
     }
-
 }
