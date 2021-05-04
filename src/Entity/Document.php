@@ -12,7 +12,7 @@ use Doctrine\ORM\Mapping\Entity;
  * @Entity
  * @ApiResource()
  */
-final class Document
+class Document
 {
     /**
      * @ORM\Id()
