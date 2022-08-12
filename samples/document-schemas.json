@@ -1,0 +1,75 @@
+[
+  {
+    "name": "Driving license",
+    "type": "driving_license",
+    "fields": {
+      "firstName": {
+        "label": "First name",
+        "htmlInputType": "text",
+        "required": true,
+        "multiple": false
+      },
+      "lastName": {
+        "label": "Last name",
+        "htmlInputType": "text",
+        "required": true,
+        "multiple": false
+      },
+      "birthPlace": {
+        "label": "Birth place",
+        "htmlInputType": "text",
+        "required": true,
+        "multiple": false
+      },
+      "categories": {
+        "label": "Categories",
+        "htmlInputType": "select",
+        "required": true,
+        "values": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "multiple": true
+      }
+    }
+  },
+  {
+    "name": "Passport",
+    "type": "passport",
+    "fields": {
+      "firstName": {
+        "label": "First name",
+        "htmlInputType": "text",
+        "required": true,
+        "multiple": false
+      },
+      "lastName": {
+        "label": "Last name",
+        "htmlInputType": "text",
+        "required": true,
+        "multiple": false
+      },
+      "citizenship": {
+        "label": "Citizenship",
+        "htmlInputType": "text",
+        "required": true,
+        "multiple": false
+      },
+      "series": {
+        "label": "Series",
+        "htmlInputType": "text",
+        "required": true,
+        "multiple": false
+      },
+      "number": {
+        "label": "Number",
+        "htmlInputType": "text",
+        "required": true,
+        "multiple": false
+      }
+    }
+  }
+]
